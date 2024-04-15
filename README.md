@@ -1,1 +1,1 @@
-# lwa_dev_test
+# go to your deployed folder
