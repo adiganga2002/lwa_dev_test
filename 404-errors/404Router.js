@@ -28,7 +28,7 @@ window.onload = () => {
 
 function getGS1Url() {
     let gs1Url;
-    let gs1Split = window.location.href.split(window.location.origin);
+    let gs1Split = document.referrer.split(window.location.origin);
     if (gs1Split && gs1Split[1] && gs1DigitalLinkRegex.test(gs1Split[1])) {
         const match = gs1Split[1].match(gs1DigitalLinkRegex);
         const gtin = match[1];
