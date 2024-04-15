@@ -1,1 +1,2 @@
-# go to your deployed folder
+# LWA
+LWA Application code

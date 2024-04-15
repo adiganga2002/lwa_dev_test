@@ -1,2 +1,0 @@
-# LWA
-LWA Application code
