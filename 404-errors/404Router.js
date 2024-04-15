@@ -30,10 +30,10 @@ function getGS1Url() {
     let gs1Url;
     let gs1Split = document.referrer.split(window.location.origin);
     if (gs1Split && gs1Split[1] && gs1DigitalLinkRegex.test(gs1Split[1])) {
-        const match = gs1Split[1].match(gs1DigitalLinkRegex);
-        const gtin = match[1];
-        const batchNumber = match[2];
-        const expiry = match[3];
+        const matchesArr = gs1Split[1].match(gs1DigitalLinkRegex);
+        const gtin = matchesArr[1];
+        const batchNumber = matchesArr[2];
+        const expiry = matchesArr[3];
         gs1Url = `/leaflet.html?gtin=${gtin}&batch=${batchNumber}&expiry=${expiry}`;
     }
     return gs1Url;
