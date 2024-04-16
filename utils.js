@@ -313,20 +313,9 @@ function setFontSize() {
 }
 
 function loadAppVersion() {
-    debugger;
-    let gs1Split = window.location.href.split(window.location.origin);
-    let urlPart = "main.html";
-    const gs1DigitalLinkRegex = /\/01\/(\d{14})\/10\/(\w{1,20})\?17=(\d{6})/;
-    if (gs1Split && gs1Split[1] && gs1DigitalLinkRegex.test(gs1Split[1])) {
-        const match = gs1Split[1].match(gs1DigitalLinkRegex);
-        const gtin = match[1];
-        const batchNumber = match[2];
-        const expiry = match[3];
-        urlPart = `/leaflet.html?gtin=${gtin}&batch=${batchNumber}&expiry=${expiry}`;
-    }
-    let appRootPage = `/app/${urlPart}`;
+  let appRootPage = `/app/main.html`;
     if (environment.enableRootVersion) {
-        appRootPage = `/${environment.appBuildVersion}/${urlPart}`;
+    appRootPage = `/${environment.appBuildVersion}/main.html`;
     }
     goToPage(appRootPage);
 }
