@@ -330,7 +330,7 @@ function parseGS1Code(scannedBarcode) {
         return;
     }
 
-    return this.parseGs1Fields(gs1FormatFields.ol);
+    return parseGs1Fields(gs1FormatFields.ol);
 }
 
 function parseGs1Fields(orderedList) {
