@@ -42,6 +42,7 @@ window.onload = () => {
 }
 
 function getGS1Url() {
+    debugger;
     let gs1Url;
     let retrievedURL;
     if (document.referrer && window.location.href.includes("404-errors")) {
