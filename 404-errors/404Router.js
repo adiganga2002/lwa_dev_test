@@ -1,6 +1,5 @@
 import environment from "../environment.js";
 import interpretGS1scan from "../interpretGS1scan/interpretGS1scan.js";
-import {convertFromISOtoYYYY_HM} from "../utils";
 
 const appPages = ["main.html", "scan.html", "leaflet.html", "error.html", "about-page.html", "help-page.html", "privacy-page.html", "terms-page.html"];
 //regex for GS1 Digital Link validation (ex: https://brand.com/01/21215242352340/10/UV2307?17=210710)
