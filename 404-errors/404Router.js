@@ -50,7 +50,7 @@ function getGS1Url() {
     } else {
         gs1Split = window.location.href.split(window.location.origin);
     }
-    let gs1FormatFields = interpretGS1scan.interpretScan(scannedBarcode);
+    let gs1FormatFields = interpretGS1scan.interpretScan(gs1Split[1]);
 
     if (gs1Split && gs1Split[1] && gs1DigitalLinkRegex.test(gs1Split[1])) {
         const matchesArr = gs1Split[1].match(gs1DigitalLinkRegex);
